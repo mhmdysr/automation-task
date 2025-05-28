@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="E2E Test Cases" verbose="1" parallel="false" preserve-order="true">
+        <classes>
+            <class name="tests.UserLoginTests"></class>
+            <class name="tests.HomeTests"></class>
+            <class name="tests.ProductTests"></class>
+            <class name="tests.SearchTests"></class>
+            <class name="tests.CheckoutErrorHandlingTests"></class>
+        </classes>
+    </test>
+</suite>
