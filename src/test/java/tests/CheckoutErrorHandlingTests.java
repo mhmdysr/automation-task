@@ -15,6 +15,7 @@ public class CheckoutErrorHandlingTests extends BaseTest {
     public void addProductToCart() {
         productPage = new ProductPage(driver);
 
+
         productPage.clickNokiaProduct();
         productPage.clickAddToCartBtn();
         productPage.handeAlertPopup("accept");
