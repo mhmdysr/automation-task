@@ -27,6 +27,9 @@ This automation covers:
 - Maven
 - IntelliJ IDEA
 - WebDriver (ChromeDriver)
+- Selenium webDriver
+- TestNG
+- POM Design Pattern
 - Internet access
 
 ----
