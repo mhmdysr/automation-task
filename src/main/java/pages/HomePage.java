@@ -12,22 +12,21 @@ public class HomePage {
     WebDriver driver;
     WebDriverWait driverWait;
 
-    public HomePage(WebDriver driver){
-        this.driver=driver;
-        this.driverWait=new WebDriverWait(driver,Duration.ofSeconds(20));
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+        this.driverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    private  final By homoLogo=By.cssSelector("li[class='nav-item active']");
-    private  final By categoriesSection=By.xpath("//a[text()='CATEGORIES']");
+    private final By homoLogo = By.cssSelector("li[class='nav-item active']");
+    private final By categoriesSection = By.xpath("//a[text()='CATEGORIES']");
 
-    public Boolean isHomePageDisplayed(){
+    public Boolean isHomePageDisplayed() {
         try {
 
             driverWait.until(ExpectedConditions.visibilityOfElementLocated(homoLogo));
             driverWait.until(ExpectedConditions.visibilityOfElementLocated(categoriesSection));
             return true;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }

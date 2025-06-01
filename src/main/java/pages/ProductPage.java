@@ -225,6 +225,7 @@ public class ProductPage {
         String data = lines[4].replace("Date: ", "").trim();
         return data.split("/")[2];
     }
+
     // Take ScreenSHoot [Methods]
     public void screenshotOfConfirmationPopup() throws IOException {
         //create a timestamp to avoid repeat the screenshot name

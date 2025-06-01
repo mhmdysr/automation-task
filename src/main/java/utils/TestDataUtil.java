@@ -1,4 +1,5 @@
 package utils;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -18,7 +19,7 @@ public class TestDataUtil {
             e.printStackTrace();
             return null;
         }
-}
+    }
 
 
 }

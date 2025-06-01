@@ -11,26 +11,27 @@ public class UserLoginPage {
 
     WebDriver driver;
     WebDriverWait driverWait;
-    public UserLoginPage(WebDriver driver){
-        this.driver=driver;
-        this.driverWait=new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    public UserLoginPage(WebDriver driver) {
+        this.driver = driver;
+        this.driverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
 
     //Locators
-    private final By loginBtn=By.id("login2");
-    private final By usernameField=By.id("loginusername");
-    private final By passwordField=By.id("loginpassword");
-    private final By submitLoginBtn=By.cssSelector("button[onclick=\"logIn()\"]");
-    private final By usernameText=By.id("nameofuser");
+    private final By loginBtn = By.id("login2");
+    private final By usernameField = By.id("loginusername");
+    private final By passwordField = By.id("loginpassword");
+    private final By submitLoginBtn = By.cssSelector("button[onclick=\"logIn()\"]");
+    private final By usernameText = By.id("nameofuser");
 
     //Methods
 
-    public void clickLoginBtn(){
+    public void clickLoginBtn() {
         driver.findElement(loginBtn).click();
     }
 
-    public void setUsernameAndPassword(String username ,String password){
+    public void setUsernameAndPassword(String username, String password) {
 
 
         //set the username field
@@ -44,11 +45,12 @@ public class UserLoginPage {
         driver.findElement(passwordField).sendKeys(password);
 
     }
-    public void clickSubmitBtn(){
+
+    public void clickSubmitBtn() {
         driver.findElement(submitLoginBtn).click();
     }
 
-    public String getLoggedUserName(){
+    public String getLoggedUserName() {
 
         return driverWait.until(ExpectedConditions.visibilityOfElementLocated(usernameText)).getText();
     }

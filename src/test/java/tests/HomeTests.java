@@ -9,10 +9,10 @@ public class HomeTests extends BaseTest {
 
 
     @Test
-    public void verifyHomePageLoadsSuccessfully(){
+    public void verifyHomePageLoadsSuccessfully() {
 
-        HomePage homeTests=new HomePage(driver);
-        Assert.assertTrue(homeTests.isHomePageDisplayed(),"Homepage did not load successfully.");
+        HomePage homePage = new HomePage(driver);
+        Assert.assertTrue(homePage.isHomePageDisplayed(), "Homepage did not load successfully.");
 
 
     }
