@@ -45,6 +45,7 @@ public class ProductTests extends BaseTest {
 
     @Test(priority = 2)
     public void tc_02_addProductToCart() {
+
         // addProductToCart page
         productPage.clickAddToCartBtn();
         productPage.handeAlertPopup("accept");
@@ -78,6 +79,7 @@ public class ProductTests extends BaseTest {
 
     @Test(priority = 3, dataProvider = "placeOrderData")
     public void tc_03_placeOrderAndValidateOrderData(String orderName, String orderCountry, String orderCity, String cardNum, String cardMonth, String cardYear) {
+
         // Click the “Place Order” button
         productPage.clickPlaceOrderBtn();
 
@@ -85,7 +87,6 @@ public class ProductTests extends BaseTest {
         productPage.fillCheckoutDetails(orderName, orderCountry, orderCity, cardNum, cardMonth, cardYear);
 
         // Extract and validate data before submission
-
         String actualOrderName = productPage.getCheckoutFieldValues().get(0);
         String actualOrderCountry = productPage.getCheckoutFieldValues().get(1);
         String actualOrderCity = productPage.getCheckoutFieldValues().get(2);
@@ -104,7 +105,7 @@ public class ProductTests extends BaseTest {
             String expectedOrderCardYear = (String) expectedData[i][5];
 
 
-            // Now compare actual with expected (entered data and data before submission)
+            // Now compare actual with expected (entered data and data before submission).
             Assert.assertEquals(actualOrderName, expectedOrderName, "Order Name mismatch");
             Assert.assertEquals(actualOrderCountry, expectedOrderCountry, "Order Country mismatch");
             Assert.assertEquals(actualOrderCity, expectedOrderCity, "Order City mismatch");
